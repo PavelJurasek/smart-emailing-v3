@@ -4,6 +4,7 @@ namespace SmartEmailing\v3;
 use GuzzleHttp\Client;
 use SmartEmailing\v3\Request\Contactlists\ContactlistEndpoint;
 use SmartEmailing\v3\Request\Contactlists\Contactlists;
+use SmartEmailing\v3\Request\Contacts\ContactsEndpoint;
 use SmartEmailing\v3\Request\Credentials\Credentials;
 use SmartEmailing\v3\Request\CustomFields\CustomFields;
 use SmartEmailing\v3\Request\Email\EmailsEndpoint;
@@ -64,6 +65,11 @@ class Api
     public function contactlist(): ContactlistEndpoint
     {
         return new ContactlistEndpoint($this);
+    }
+
+    public function contacts(): ContactsEndpoint
+    {
+        return new ContactsEndpoint($this);
     }
 
     /**
